@@ -20,7 +20,7 @@ export default function SearchResultsPage() {
         const fetchResults = async () => {
             setLoading(true);
             try {
-                const res = await fetch("http://localhost:3000/api/search", {
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/search`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

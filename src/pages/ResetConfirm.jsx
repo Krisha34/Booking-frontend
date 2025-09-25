@@ -17,7 +17,7 @@ export default function ResetConfirm() {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:3000/api/auth/reset-password/confirm", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/reset-password/confirm`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ token, newPassword }),

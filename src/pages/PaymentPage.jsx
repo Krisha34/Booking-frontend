@@ -30,7 +30,7 @@ const PaymentPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/api/payments/checkout', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/payment/create-checkout-session`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
